@@ -18,6 +18,8 @@ class KarlsGitflow < Formula
     sha256 @arm64sha256
   end
 
+  # Don't have any linux binaries available yet, so limit to macOS
+  depends_on macos:
   # .NET Core 10 is only supported on macOS 15 and later
   depends_on macos: :sequoia
 
@@ -26,6 +28,7 @@ class KarlsGitflow < Formula
 
   def install
     libexec.install Dir["*"]
+    chmod 0555, libexec/"pwsh"
     bin.install_symlink libexec/"git-flow"
   end
 
