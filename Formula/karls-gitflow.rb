@@ -19,7 +19,7 @@ class KarlsGitflow < Formula
   end
 
   # .NET Core 10 is only supported on macOS 15 and later
-  depends_on macos: >= :sequoia
+  depends_on macos: :sequoia
 
   conflicts_with "git-flow", because: "both install the same binaries"
   conflicts_with "git-flow-avh", because: "both install the same binaries"
