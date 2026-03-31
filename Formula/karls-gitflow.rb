@@ -1,9 +1,9 @@
 class KarlsGitflow < Formula
   desc "Opinionated Git Flow implementation written in .NET"
   homepage "https://github.com/karl-sjogren/karls-gitflow"
-  license "MIT"
   version "0.0.13"
   version_scheme 1
+  license "MIT"
 
   @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.13/karls-gitflow-0.0.13-osx-arm64.zip"
   @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.13/karls-gitflow-0.0.13-osx-x64.zip"
