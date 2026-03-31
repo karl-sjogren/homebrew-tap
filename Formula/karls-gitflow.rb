@@ -22,7 +22,6 @@ class KarlsGitflow < Formula
   depends_on macos: :sequoia
 
   conflicts_with "git-flow", because: "both install the same binaries"
-  conflicts_with "git-flow-avh", because: "both install the same binaries"
   conflicts_with "git-flow-next", because: "both install the same binaries"
 
   test do
