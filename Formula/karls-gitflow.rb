@@ -19,7 +19,7 @@ class KarlsGitflow < Formula
   end
 
   # Don't have any linux binaries available yet, so limit to macOS
-  depends_on macos:
+  depends_on :macos
   # .NET Core 10 is only supported on macOS 15 and later
   depends_on macos: :sequoia
 
