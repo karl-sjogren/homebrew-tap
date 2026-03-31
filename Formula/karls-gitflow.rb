@@ -28,7 +28,6 @@ class KarlsGitflow < Formula
 
   def install
     libexec.install Dir["*"]
-    chmod 0555, libexec/"git-flow"
     bin.install_symlink libexec/"git-flow"
   end
 
