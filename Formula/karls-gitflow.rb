@@ -24,6 +24,11 @@ class KarlsGitflow < Formula
   conflicts_with "git-flow", because: "both install the same binaries"
   conflicts_with "git-flow-next", because: "both install the same binaries"
 
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"git-flow"
+  end
+
   test do
     assert_equal "0.0.13", shell_output("#{bin}/git-flow version").strip
   end
