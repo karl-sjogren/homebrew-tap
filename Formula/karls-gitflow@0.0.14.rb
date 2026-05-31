@@ -1,4 +1,4 @@
-class KarlsGitflowAt0_0_14 < Formula
+class KarlsGitflowAt0014 < Formula
   desc "Opinionated Git Flow implementation written in .NET"
   homepage "https://github.com/karl-sjogren/karls-gitflow"
   version "0.0.14"
@@ -18,12 +18,9 @@ class KarlsGitflowAt0_0_14 < Formula
     sha256 @arm64sha256
   end
 
-  # Don't have any linux binaries available yet, so limit to macOS
-  depends_on :macos
   # .NET Core 10 is only supported on macOS 15 and later
   depends_on macos: :sequoia
 
-  conflicts_with "git-flow", because: "both install the same binaries"
   conflicts_with "git-flow-next", because: "both install the same binaries"
 
   def install
