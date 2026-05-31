@@ -1,4 +1,4 @@
-class KarlsGitflowAt0014 < Formula
+class KarlsGitflowAT0014 < Formula
   desc "Opinionated Git Flow implementation written in .NET"
   homepage "https://github.com/karl-sjogren/karls-gitflow"
   version "0.0.14"
@@ -21,14 +21,12 @@ class KarlsGitflowAt0014 < Formula
   # .NET Core 10 is only supported on macOS 15 and later
   depends_on macos: :sequoia
 
-  conflicts_with "git-flow-next", because: "both install the same binaries"
-
   def install
     libexec.install Dir["*"]
     bin.install_symlink libexec/"git-flow"
   end
 
   test do
-    assert_equal "0.0.13", shell_output("#{bin}/git-flow --version").strip
+    assert_equal "0.0.14", shell_output("#{bin}/git-flow --version").strip
   end
 end
