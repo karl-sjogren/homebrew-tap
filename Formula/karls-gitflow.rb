@@ -8,7 +8,7 @@ class KarlsGitflow < Formula
   @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-arm64.zip"
   @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-x64.zip"
   @arm64sha256 = "00b3934c8ae570b563c1ff30647112a92818bdaa6cc3c5a316b7c100bfc4e101"
-  @x64sha256 = "27a1a8999161dbe4ca0d6c62f811266b169f77dd1f16bc87a8880aacb8ca6254"
+  @x64sha256 = "b115ed8ce3a2ac3a4c089b92fc462342f75fdfa8e1201186cf3f5d1f01af9c7d"
 
   if Hardware::CPU.intel?
     url @x64url
