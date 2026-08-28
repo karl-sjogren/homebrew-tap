@@ -37,9 +37,9 @@ class KarlsGitflow < Formula
       libexec.install Dir["*"]
       bin.install_symlink libexec/"git-flow"
     end
+  end
   
-    test do
-      assert_equal "0.0.14", shell_output("#{bin}/git-flow --version").strip
-    end
+  test do
+    assert_equal "0.0.14", shell_output("#{bin}/git-flow --version").strip
   end
 end
