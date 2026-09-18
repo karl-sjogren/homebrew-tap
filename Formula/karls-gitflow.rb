@@ -10,7 +10,9 @@ class KarlsGitflow < Formula
     sha256 cellar: :any_skip_relocation, sequoia:     "d461ebfb0c17c12c87f7462fc77549173d3788ac8d58b7ed446386b3f41d6e44"
   end
 
-  depends_on :macos
+  # Don't have any linux binaries available yet, so limit to macOS
+  # .NET Core 10 is only supported on macOS 15 and later
+  depends_on macos: :sequoia
 
   @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-arm64.zip"
   @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-x64.zip"
@@ -25,10 +27,6 @@ class KarlsGitflow < Formula
       url @arm64url
       sha256 @arm64sha256
     end
-
-    # Don't have any linux binaries available yet, so limit to macOS
-    # .NET Core 10 is only supported on macOS 15 and later
-    depends_on macos: :sequoia
 
     conflicts_with "git-flow", because: "both install the same binaries"
     conflicts_with "git-flow-next", because: "both install the same binaries"
