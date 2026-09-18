@@ -10,6 +10,8 @@ class KarlsGitflow < Formula
     sha256 cellar: :any_skip_relocation, sequoia:     "d461ebfb0c17c12c87f7462fc77549173d3788ac8d58b7ed446386b3f41d6e44"
   end
 
+  depends_on :macos
+
   @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-arm64.zip"
   @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.14/karls-gitflow-0.0.14-osx-x64.zip"
   @arm64sha256 = "00b3934c8ae570b563c1ff30647112a92818bdaa6cc3c5a316b7c100bfc4e101"
