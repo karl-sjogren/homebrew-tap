@@ -49,3 +49,4 @@ class KarlsGitflow < Formula
     assert_equal version.to_s, shell_output("#{bin}/git-flow --version").strip
   end
 end
+
