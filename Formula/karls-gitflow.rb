@@ -6,16 +6,32 @@ class KarlsGitflow < Formula
 
   @version = "0.0.14"
 
-  depends_on macos: :sequoia
+  bottle do
+    root_url "https://github.com/karl-sjogren/karls-gitflow/releases/download/"
+    sha256 arm:   "00b3934c8ae570b563c1ff30647112a92818bdaa6cc3c5a316b7c100bfc4e101",
+           intel: "b115ed8ce3a2ac3a4c089b92fc462342f75fdfa8e1201186cf3f5d1f01af9c7d"
+  end
+
+  depends_on arch: :arm64, macos: :sequoia
 
   on_macos do
     on_arm do
-      sha256 "00b3934c8ae570b563c1ff30647112a92818bdaa6cc3c5a316b7c100bfc4e101"
-      url "https://github.com/karl-sjogren/karls-gitflow/releases/download/#{@version}/karls-gitflow-#{@version}-osx-arm64.zip"
+      url "#{@version}/karls-gitflow-#{@version}-osx-arm64.zip"
     end
     on_intel do
-      sha256 "b115ed8ce3a2ac3a4c089b92fc462342f75fdfa8e1201186cf3f5d1f01af9c7d"
-      url "https://github.com/karl-sjogren/karls-gitflow/releases/download/#{@version}/karls-gitflow-#{version}-osx-x64.zip"
+      url "#{@version}/karls-gitflow-#{@version}-osx-x64.zip"
+    end
+  end
+
+  on_linux do
+    disable! because: "This tool does not support Linux via Homebrew yet.", date: "2026-10-09"
+    on_arm do
+      url "file:///dev/null"
+      version @version
+    end
+    on_intel do
+      url "file:///dev/null"
+      version @version
     end
   end
 
