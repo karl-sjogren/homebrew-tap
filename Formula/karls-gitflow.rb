@@ -4,10 +4,10 @@ class KarlsGitflow < Formula
   license "MIT"
   version_scheme 1
 
-  @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.15/karls-gitflow-0.0.15-osx-arm64.zip"
-  @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.15/karls-gitflow-0.0.15-osx-x64.zip"
-  @arm64sha256 = "92f7c0ef3cc92967d19cc6a91d0c0bddecba58d8f86a8a12e2ff9b1ca8ffbb65"
-  @x64sha256 = "a1f8a3e5376c775866d2ff2ebab97c28980efb5fc4f8ed5df97d77582184ac78"
+  @arm64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.16/karls-gitflow-0.0.16-osx-arm64.zip"
+  @x64url = "https://github.com/karl-sjogren/karls-gitflow/releases/download/0.0.16/karls-gitflow-0.0.16-osx-x64.zip"
+  @arm64sha256 = "0f42a4a8f3f7fab458d81ee40c1c5982cc0ad49efb3ca2e3d908f8ca57d51e0a"
+  @x64sha256 = "15fc2b2ec2ad4dfbc90bf1a512bcf4857ff3c34b6bb1400b195ff27bffe7d2ac"
 
   if Hardware::CPU.intel?
     url @x64url
@@ -29,6 +29,6 @@ class KarlsGitflow < Formula
   end
 
   test do
-    assert_equal "0.0.15", shell_output("#{bin}/git-flow --version").strip
+    assert_equal "0.0.16", shell_output("#<built-in function bin>/git-flow --version").strip
   end
 end
