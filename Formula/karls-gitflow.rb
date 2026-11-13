@@ -29,6 +29,6 @@ class KarlsGitflow < Formula
   end
 
   test do
-    assert_equal "0.0.16", shell_output("#<built-in function bin>/git-flow --version").strip
+    assert_equal "0.0.16", shell_output("#{bin}/git-flow --version").strip
   end
 end
