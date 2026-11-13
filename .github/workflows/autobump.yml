@@ -9,6 +9,7 @@ on:
       - .github/workflows/autobump.yml
   schedule:
     - cron: 45 5 * * *
+  workflow_dispatch: 
 
 permissions: {}
 
